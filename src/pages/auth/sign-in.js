@@ -59,12 +59,12 @@ export default function SignIn() {
               type="submit"
               className="w-full text-center py-3 rounded bg-green-400 text-white hover:bg-green-dark focus:outline-none my-1"
             >
-              Create Account
+              Sign in
             </button>
           </form>
 
           <div className="text-center text-sm text-grey-dark mt-4">
-            By signing up, you agree to the
+            By signing in, you agree to the
             <a
               class="no-underline border-b border-grey-dark text-grey-dark"
               href="#"
@@ -82,12 +82,12 @@ export default function SignIn() {
         </div>
 
         <div className="text-grey-dark mt-6">
-          Already have an account?
+          Dont have an account?
           <a
             className="no-underline border-b border-blue text-blue"
-            href="../login/"
+            onClick={() => navigate("/sign-up")}
           >
-            Log in
+            Sign up
           </a>
           .
         </div>

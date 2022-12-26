@@ -1,6 +1,7 @@
 import LandingPage from "./pages/landing";
 import SignUp from "./pages/auth/sign-up";
 import SignIn from "./pages/auth/sign-in";
+import CreateBoardingHouse from "./pages/boardingHouse/createBoardingHouse";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -11,6 +12,10 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
+        <Route
+          path="/create-boarding-house"
+          element={<CreateBoardingHouse />}
+        />
       </Routes>
     </Router>
   );

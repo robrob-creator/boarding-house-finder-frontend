@@ -68,6 +68,7 @@ const Navbar = (props) => {
 
 function Dropdown(props) {
   const { user } = props;
+  const navigate = useNavigate();
   return (
     <div className=" w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">
@@ -120,8 +121,20 @@ function Dropdown(props) {
                     className={`${
                       active ? "bg-violet-500 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    onClick={() => navigate("/create-boarding-house")}
                   >
-                    Rooms
+                    Create Boarding House
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                  >
+                    Boarding Houses
                   </button>
                 )}
               </Menu.Item>

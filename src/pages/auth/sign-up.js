@@ -1,9 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { register } from "../../services/user";
 
 export default function SignUp() {
   const [errors, setErrors] = useState();
+  const navigate = useNavigate();
+
   const submit = async (e) => {
     e.preventDefault();
     let body = {
@@ -45,6 +48,7 @@ export default function SignUp() {
     if (!errors) {
       let res = await register(body);
       console.log(res);
+      navigate("/sign-in");
     }
   };
   return (
@@ -172,6 +176,7 @@ export default function SignUp() {
           <a
             className="no-underline border-b border-blue text-blue"
             href="../login/"
+            onClick={() => navigate("/sign-up")}
           >
             Log in
           </a>
