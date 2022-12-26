@@ -75,7 +75,7 @@ export default function CreateBoardingHouse() {
                   name="address"
                   placeholder="Addres"
                 />
-                <p className="text-red-400 text-xs italic">{errors?.addres}</p>
+                <p className="text-red-400 text-xs italic">{errors?.address}</p>
               </div>
 
               <div className=" mb-4">
