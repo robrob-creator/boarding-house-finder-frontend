@@ -132,11 +132,6 @@ export default function Footer() {
             <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
               Button
             </button>
-            <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">
-              Bitters chicharrones fanny pack
-              <br class="lg:block hidden" />
-              waistcoat green juice
-            </p>
           </div>
           <span class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
             <a class="text-gray-500">
@@ -200,18 +195,18 @@ export default function Footer() {
       <div class="bg-gray-200">
         <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p class="text-gray-500 text-sm text-center sm:text-left">
-            © 2020 Tailwind Blocks —
+            © 2020 BORDINGO
             <a
               href="https://twitter.com/knyttneve"
               class="text-gray-600 ml-1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              @knyttneve
+              @Boarding house finder
             </a>
           </p>
           <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">
-            Enamel pin tousled raclette tacos irony
+            Find what you are looking for here.
           </span>
         </div>
       </div>
