@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Menu } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import store from "store";
 
 const Navbar = (props) => {
   const { user } = props;
@@ -34,9 +35,12 @@ const Navbar = (props) => {
         {!user ? (
           <>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-              <a class="mr-5 hover:text-gray-900">TEAM</a>
-              <a class="mr-5 hover:text-gray-900">FIND</a>
-              <a class="mr-5 hover:text-gray-900">SIGN IN</a>
+              <a
+                class="mr-5 hover:text-gray-900"
+                onClick={() => navigate("/sign-in")}
+              >
+                SIGN IN
+              </a>
             </nav>
             <button
               class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"
@@ -139,6 +143,21 @@ function Dropdown(props) {
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     Boarding Houses
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    onClick={() => {
+                      store.remove("accessToken");
+                      window.location.reload();
+                    }}
+                  >
+                    Logout
                   </button>
                 )}
               </Menu.Item>

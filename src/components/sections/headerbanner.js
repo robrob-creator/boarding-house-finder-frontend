@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import image from "../../assets/header-bg.jpg";
 export default function Headerbanner() {
+  const navigate = useNavigate();
   return (
     <section class="text-gray-700 body-font bg">
       <div class="container mx-auto flex px-5 py-16 md:flex-row flex-col items-center">
@@ -15,10 +17,16 @@ export default function Headerbanner() {
             and find the place that suit your taste.
           </p>
           <div class="flex justify-center">
-            <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            <button
+              class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              onClick={() => navigate("/sign-in")}
+            >
               SIGN IN
             </button>
-            <button class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">
+            <button
+              class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
+              onClick={() => navigate("/sign-up")}
+            >
               SIGN UP
             </button>
           </div>
